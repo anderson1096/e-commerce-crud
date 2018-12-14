@@ -1,19 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const productMocks = require('../utils/mocks/products');
 
-const products = [
-    {
-        name: "Red shoes",
-        price: 75
-    },
-    {
-        name: "Black bike",
-        price: 300
-    }
-]
 
 router.get('/', (req, res) => {
-    res.render("products", { products });
+    res.render("products", { productMocks });
 });
 
 module.exports = router;
